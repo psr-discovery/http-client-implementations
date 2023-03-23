@@ -86,7 +86,7 @@ $httpClient2 = Discovery::httpClient(singleton: true);
 
 ## Mocking Priority
 
-This library will give priority to searching for an available PSR mocking library, like `psr-mock/http-client-implementation` or `php-http/mock-client`.
+This library will give priority to searching for a known, available mocking library before searching for a real implementation. This is to allow for easier testing of code that uses this library.
 
 The expectation is that these mocking libraries will always be installed as development dependencies, and therefore if they are available, they are intended to be used.
 
