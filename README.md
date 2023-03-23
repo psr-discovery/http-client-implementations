@@ -39,10 +39,10 @@ composer require --dev psr-discovery/http-client-implementations
 ## Usage
 
 ```php
-use PsrDiscovery\Discovery;
+use PsrDiscovery\Discover;
 
 // Return an instance of the first discovered PSR-18 HTTP Client implementation.
-$httpClient = Discovery::httpClient();
+$httpClient = Discover::httpClient();
 
 // Send a request using the discovered HTTP Client.
 $httpClient->sendRequest(...);
@@ -50,14 +50,14 @@ $httpClient->sendRequest(...);
 
 ## Handling Failures
 
-If the library is unable to discover a suitable PSR-18 implementation, the `Discovery::httpClient()` discovery method will simply return `null`. This allows you to handle the failure gracefully, for example by falling back to a default implementation.
+If the library is unable to discover a suitable PSR-18 implementation, the `Discover::httpClient()` discovery method will simply return `null`. This allows you to handle the failure gracefully, for example by falling back to a default implementation.
 
 Example:
 
 ```php
-use PsrDiscovery\Discovery;
+use PsrDiscovery\Discover;
 
-$httpClient = Discovery::httpClient();
+$httpClient = Discover::httpClient();
 
 if ($httpClient === null) {
     // No suitable HTTP Client implementation was discovered.
@@ -68,20 +68,20 @@ if ($httpClient === null) {
 
 ## Singletons
 
-By default, the `Discovery::httpClient()` method will always return a new instance of the discovered implementation. If you wish to use a singleton instance instead, simply pass `true` to the `$singleton` parameter of the discovery method.
+By default, the `Discover::httpClient()` method will always return a new instance of the discovered implementation. If you wish to use a singleton instance instead, simply pass `true` to the `$singleton` parameter of the discovery method.
 
 Example:
 
 ```php
-use PsrDiscovery\Discovery;
+use PsrDiscovery\Discover;
 
 // $httpClient1 !== $httpClient2 (default)
-$httpClient1 = Discovery::httpClient();
-$httpClient2 = Discovery::httpClient();
+$httpClient1 = Discover::httpClient();
+$httpClient2 = Discover::httpClient();
 
 // $httpClient1 === $httpClient2
-$httpClient1 = Discovery::httpClient(singleton: true);
-$httpClient2 = Discovery::httpClient(singleton: true);
+$httpClient1 = Discover::httpClient(singleton: true);
+$httpClient2 = Discover::httpClient(singleton: true);
 ```
 
 ## Mocking Priority
@@ -95,7 +95,7 @@ The expectation is that these mocking libraries will always be installed as deve
 If you wish to prefer a specific implementation over others, you can `prefer()` it by package name:
 
 ```php
-use PsrDiscovery\Discovery;
+use PsrDiscovery\Discover;
 use PsrDiscovery\Implementations\Psr18\Clients;
 
 // Prefer the a specific implementation of PSR-18 over others.
@@ -104,7 +104,7 @@ Clients::prefer('guzzlehttp/guzzle');
 // Return an instance of GuzzleHttp\Client,
 // or the next available from the list of candidates,
 // Returns null if none are discovered.
-$factory = Discovery::httpClient();
+$factory = Discover::httpClient();
 ```
 
 This will cause the `httpClient()` method to return the preferred implementation if it is available, otherwise, it will fall back to the default behavior.
@@ -116,7 +116,7 @@ Note that assigning a preferred implementation will give it priority over the de
 If you wish to force a specific implementation and ignore the rest of the discovery candidates, you can `use()` its package name:
 
 ```php
-use PsrDiscovery\Discovery;
+use PsrDiscovery\Discover;
 use PsrDiscovery\Implementations\Psr18\Clients;
 
 // Only discover a specific implementation of PSR-18.
@@ -124,7 +124,7 @@ Clients::use('guzzlehttp/guzzle');
 
 // Return an instance of GuzzleHttp\Client,
 // or null if it is not available.
-$factory = Discovery::httpClient();
+$factory = Discover::httpClient();
 ```
 
 This will cause the `httpClient()` method to return the preferred implementation if it is available, otherwise, it will return `null`.
