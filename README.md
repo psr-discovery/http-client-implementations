@@ -24,7 +24,7 @@ Successful discovery requires the presence of a compatible implementation in the
 
 ## Implementations
 
-The discovery of available implementations is based on a list of well-known libraries that provide the `psr/http-client-implementation` interface. These include:
+The discovery of available implementations is based on [a list of well-known libraries](https://packagist.org/providers/psr/http-client-implementation) that support the `psr/http-client-implementation` interface. These include:
 
 -   [guzzlehttp/guzzle](https://github.com/guzzle/guzzle) ^7.0
 -   [symfony/http-client](https://github.com/symfony/http-client) ^4.3 || ^5.0 || ^6.0
