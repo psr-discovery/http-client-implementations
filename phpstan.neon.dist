@@ -10,7 +10,6 @@ parameters:
     bootstrapFiles:
 
     ignoreErrors:
-        - '#Variable variables are not allowed.#'
 
     reportUnmatchedIgnoredErrors: true
     treatPhpDocTypesAsCertain: false

@@ -14,5 +14,6 @@
     </projectFiles>
 
     <issueHandlers>
+        <InvalidStringClass errorLevel="suppress"/>
     </issueHandlers>
 </psalm>
