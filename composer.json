@@ -1,6 +1,6 @@
 {
     "name": "psr-discovery/http-client-implementations",
-    "description": "Lightweight library that discovers available PSR-18 HTTP Clients implementations by searching for a list of well-known classes that implement the relevant interface, and returns an instance of the first one that is found.",
+    "description": "Lightweight library that discovers available PSR-18 HTTP Client implementations by searching for a list of well-known classes that implement the relevant interface, and returns an instance of the first one that is found.",
     "license": "MIT",
     "type": "library",
     "keywords": [
