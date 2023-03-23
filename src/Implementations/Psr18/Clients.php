@@ -56,7 +56,7 @@ final class Clients extends Implementation implements ClientsContract
 
         self::$candidates->add(CandidateEntity::create(
             package: 'symfony/http-client',
-            version: '^4.3 || ^5.0 || ^6.0',
+            version: '^4.3 | ^5.0 | ^6.0',
             builder: static fn (string $class = '\Symfony\Component\HttpClient\Psr18Client'): object => new $class(
                 responseFactory: Discover::httpResponseFactory(),
                 streamFactory: Discover::httpStreamFactory(),
@@ -71,7 +71,7 @@ final class Clients extends Implementation implements ClientsContract
 
         self::$candidates->add(CandidateEntity::create(
             package: 'php-http/guzzle7-adapter',
-            version: '^0.1',
+            version: '^0.1 | ^1.0',
             builder: static fn (string $class = '\Http\Adapter\Guzzle7\Client'): object => new $class(),
         ));
 
