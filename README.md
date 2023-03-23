@@ -1,4 +1,4 @@
-**Lightweight library that discovers available [PSR-18 HTTP Clients](https://www.php-fig.org/psr/psr-18/) implementations by searching for a list of well-known classes that implement the relevant interface, and returns an instance of the first one that is found.**
+**Lightweight library that discovers available [PSR-18 HTTP Client](https://www.php-fig.org/psr/psr-18/) implementations by searching for a list of well-known classes that implement the relevant interface, and returns an instance of the first one that is found.**
 
 This package is part of the [psr-discovery/discovery](https://github.com/psr-discovery/discovery) PSR discovery collection, which also supports [PSR-17 HTTP Factories](https://github.com/psr-discovery/http-factory-implementations), [PSR-14 Event Dispatchers](https://github.com/psr-discovery/event-dispatcher-implementations), [PSR-11 Containers](https://github.com/psr-discovery/container-implementations), [PSR-6 Cache](https://github.com/psr-discovery/cache-implementations) and [PSR-3 Loggers](https://github.com/psr-discovery/log-implementations).
 
