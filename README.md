@@ -27,9 +27,9 @@ Successful discovery requires the presence of a compatible implementation in the
 The discovery of available implementations is based on [a list of well-known libraries](https://packagist.org/providers/psr/http-client-implementation) that support the `psr/http-client-implementation` interface. These include:
 
 -   [guzzlehttp/guzzle](https://github.com/guzzle/guzzle) ^7.0
--   [symfony/http-client](https://github.com/symfony/http-client) ^4.3 || ^5.0 || ^6.0
+-   [symfony/http-client](https://github.com/symfony/http-client) ^4.3 | ^5.0 | ^6.0
 -   [php-http/guzzle6-adapter](https://github.com/php-http/guzzle6-adapter) ^2.0
--   [php-http/guzzle7-adapter](https://github.com/php-http/guzzle7-adapter) ^0.1
+-   [php-http/guzzle7-adapter](https://github.com/php-http/guzzle7-adapter) ^0.1 | ^1.0
 -   [php-http/curl-client](https://github.com/php-http/curl-client) ^2.1
 -   [kriswallsmith/buzz](https://github.com/kriswallsmith/Buzz) ^1.0
 -   [php-http/socket-client](https://github.com/php-http/socket-client) ^2.0
