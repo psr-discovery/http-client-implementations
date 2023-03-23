@@ -46,7 +46,7 @@ If [a particular implementation](https://packagist.org/providers/psr/http-client
 ## Installation
 
 ```bash
-composer require --dev psr-discovery/http-client-implementations
+composer require psr-discovery/http-client-implementations
 ```
 
 ## Usage
