@@ -98,7 +98,7 @@ If you wish to prefer a specific implementation over others, you can `prefer()` 
 use PsrDiscovery\Discovery;
 use PsrDiscovery\Implementations\Psr18\Clients;
 
-// Prefer the a specific implementation of PSR-17 over others.
+// Prefer the a specific implementation of PSR-18 over others.
 Clients::prefer('guzzlehttp/guzzle');
 
 // Return an instance of GuzzleHttp\Client,
@@ -119,7 +119,7 @@ If you wish to force a specific implementation and ignore the rest of the discov
 use PsrDiscovery\Discovery;
 use PsrDiscovery\Implementations\Psr18\Clients;
 
-// Only discover a specific implementation of PSR-17.
+// Only discover a specific implementation of PSR-18.
 Clients::use('guzzlehttp/guzzle');
 
 // Return an instance of GuzzleHttp\Client,
