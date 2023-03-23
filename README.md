@@ -26,7 +26,20 @@ Successful discovery requires the presence of a compatible implementation in the
 
 The discovery of available implementations is based on a list of well-known libraries that provide the `psr/http-client-implementation` interface. These include:
 
--   ...
+-   [guzzlehttp/guzzle](https://github.com/guzzle/guzzle) ^7.0
+-   [symfony/http-client](https://github.com/symfony/http-client) ^4.3 || ^5.0 || ^6.0
+-   [php-http/guzzle6-adapter](https://github.com/php-http/guzzle6-adapter) ^2.0
+-   [php-http/guzzle7-adapter](https://github.com/php-http/guzzle7-adapter) ^0.1
+-   [php-http/curl-client](https://github.com/php-http/curl-client) ^2.1
+-   [kriswallsmith/buzz](https://github.com/kriswallsmith/Buzz) ^1.0
+-   [php-http/socket-client](https://github.com/php-http/socket-client) ^2.0
+-   [php-http/guzzle5-adapter](https://github.com/php-http/guzzle5-adapter) ^2.0
+-   [voku/httpful](https://github.com/voku/httpful) ^2.2
+
+The following mock implementations are also available:
+
+-   [psr-mock/http-client-implementation](https://github.com/psr-mock/http-client-implementation) ^1.0
+-   [php-http/mock-client](https://github.com/php-http/mock-client) ^1.5
 
 If [a particular implementation](https://packagist.org/providers/psr/http-client-implementation) is missing that you'd like to see, please open a pull request adding support.
 
