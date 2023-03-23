@@ -29,11 +29,11 @@ interface ClientsContract extends ImplementationContract
     public static function discover(): ?ClientInterface;
 
     /**
-     * Prefer a candidate over all others.
+     * Prefer a package over all others.
      *
-     * @param CandidateEntity $candidate The candidate to prefer.
+     * @param string $package The package to prefer.
      */
-    public static function prefer(CandidateEntity $candidate): void;
+    public static function prefer(string $package): void;
 
     /**
      * Override the discovery process' candidates collection with a new one.
