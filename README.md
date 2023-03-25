@@ -117,7 +117,7 @@ Clients::prefer('guzzlehttp/guzzle');
 // Return an instance of GuzzleHttp\Client,
 // or the next available from the list of candidates,
 // Returns null if none are discovered.
-$factory = Discover::httpClient();
+$client = Discover::httpClient();
 ```
 
 This will cause the `httpClient()` method to return the preferred implementation if it is available, otherwise, it will fall back to the default behavior.
@@ -137,7 +137,7 @@ Clients::use('guzzlehttp/guzzle');
 
 // Return an instance of GuzzleHttp\Client,
 // or null if it is not available.
-$factory = Discover::httpClient();
+$client = Discover::httpClient();
 ```
 
 This will cause the `httpClient()` method to return the preferred implementation if it is available, otherwise, it will return `null`.
