@@ -1,6 +1,6 @@
 **Lightweight library that discovers available [PSR-18 HTTP Client](https://www.php-fig.org/psr/psr-18/) implementations by searching for a list of well-known classes that implement the relevant interface, and returns an instance of the first one that is found.**
 
-This package is part of the [psr-discovery/discovery](https://github.com/psr-discovery/discovery) PSR discovery collection, which also supports [PSR-17 HTTP Factories](https://github.com/psr-discovery/http-factory-implementations), [PSR-14 Event Dispatchers](https://github.com/psr-discovery/event-dispatcher-implementations), [PSR-11 Containers](https://github.com/psr-discovery/container-implementations), [PSR-6 Cache](https://github.com/psr-discovery/cache-implementations) and [PSR-3 Loggers](https://github.com/psr-discovery/log-implementations).
+This package is part of the [psr-discovery](https://github.com/psr-discovery/discovery) collection, which also supports [PSR-17 HTTP Factories](https://github.com/psr-discovery/http-factory-implementations), [PSR-14 Event Dispatchers](https://github.com/psr-discovery/event-dispatcher-implementations), [PSR-11 Containers](https://github.com/psr-discovery/container-implementations), [PSR-6 Cache](https://github.com/psr-discovery/cache-implementations) and [PSR-3 Loggers](https://github.com/psr-discovery/log-implementations).
 
 This is largely intended for inclusion in libraries like SDKs that wish to support PSR-18 HTTP Clients without requiring hard dependencies on specific implementations or demanding extra configuration by users.
 
@@ -24,22 +24,22 @@ Successful discovery requires the presence of a compatible implementation in the
 
 ## Implementations
 
-The discovery of available implementations is based on [a list of well-known libraries](https://packagist.org/providers/psr/http-client-implementation) that support the `psr/http-client-implementation` interface. These include:
+The following `psr/http-client-implementation` implementations are discovered and instantiated automatically:
 
 -   [guzzlehttp/guzzle](https://github.com/guzzle/guzzle) ^7.0
--   [symfony/http-client](https://github.com/symfony/http-client) ^4.3 | ^5.0 | ^6.0
+-   [kriswallsmith/buzz](https://github.com/kriswallsmith/Buzz) ^1.0
+-   [php-http/curl-client](https://github.com/php-http/curl-client) ^2.1
+-   [php-http/guzzle5-adapter](https://github.com/php-http/guzzle5-adapter) ^2.0
 -   [php-http/guzzle6-adapter](https://github.com/php-http/guzzle6-adapter) ^2.0
 -   [php-http/guzzle7-adapter](https://github.com/php-http/guzzle7-adapter) ^0.1 | ^1.0
--   [php-http/curl-client](https://github.com/php-http/curl-client) ^2.1
--   [kriswallsmith/buzz](https://github.com/kriswallsmith/Buzz) ^1.0
 -   [php-http/socket-client](https://github.com/php-http/socket-client) ^2.0
--   [php-http/guzzle5-adapter](https://github.com/php-http/guzzle5-adapter) ^2.0
+-   [symfony/http-client](https://github.com/symfony/http-client) ^4.3 | ^5.0 | ^6.0
 -   [voku/httpful](https://github.com/voku/httpful) ^2.2
 
 The following mock implementations are also available:
 
--   [psr-mock/http-client-implementation](https://github.com/psr-mock/http-client-implementation) ^1.0
 -   [php-http/mock-client](https://github.com/php-http/mock-client) ^1.5
+-   [psr-mock/http-client-implementation](https://github.com/psr-mock/http-client-implementation) ^1.0
 
 If [a particular implementation](https://packagist.org/providers/psr/http-client-implementation) is missing that you'd like to see, please open a pull request adding support.
 
