@@ -75,7 +75,7 @@ final class Clients extends Implementation implements ClientsContract
 
         self::$candidates->add(CandidateEntity::create(
             package: 'symfony/http-client',
-            version: '^4.3 | ^5.0 | ^6.0',
+            version: '^4.3 | ^5.0 | ^6.0 | ^7.0',
             builder: static fn (string $class = '\Symfony\Component\HttpClient\Psr18Client'): object => new $class(
                 responseFactory: Discover::httpResponseFactory(),
                 streamFactory: Discover::httpStreamFactory(),
