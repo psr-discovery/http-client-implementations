@@ -33,7 +33,7 @@ The following `psr/http-client-implementation` implementations are discovered an
 -   [php-http/guzzle6-adapter](https://github.com/php-http/guzzle6-adapter) ^2.0
 -   [php-http/guzzle7-adapter](https://github.com/php-http/guzzle7-adapter) ^0.1 | ^1.0
 -   [php-http/socket-client](https://github.com/php-http/socket-client) ^2.0
--   [symfony/http-client](https://github.com/symfony/http-client) ^4.3 | ^5.0 | ^6.0
+-   [symfony/http-client](https://github.com/symfony/http-client) ^4.3 | ^5.0 | ^6.0 | ^7.0
 -   [voku/httpful](https://github.com/voku/httpful) ^2.2
 
 The following mock implementations are also available:
