@@ -32,7 +32,7 @@ final class Clients extends Implementation implements ClientsContract
      */
     public static function allCandidates(): CandidatesCollection
     {
-        if (self::$extendedCandidates instanceof \PsrDiscovery\Collections\CandidatesCollection) {
+        if (self::$extendedCandidates instanceof CandidatesCollection) {
             return self::$extendedCandidates;
         }
 
@@ -47,7 +47,7 @@ final class Clients extends Implementation implements ClientsContract
      */
     public static function candidates(): CandidatesCollection
     {
-        if (self::$candidates instanceof \PsrDiscovery\Collections\CandidatesCollection) {
+        if (self::$candidates instanceof CandidatesCollection) {
             return self::$candidates;
         }
 
@@ -141,7 +141,7 @@ final class Clients extends Implementation implements ClientsContract
      */
     public static function discover(): ?ClientInterface
     {
-        if (self::$using instanceof \Psr\Http\Client\ClientInterface) {
+        if (self::$using instanceof ClientInterface) {
             return self::$using;
         }
 
@@ -169,7 +169,7 @@ final class Clients extends Implementation implements ClientsContract
 
     public static function singleton(): ?ClientInterface
     {
-        if (self::$using instanceof \Psr\Http\Client\ClientInterface) {
+        if (self::$using instanceof ClientInterface) {
             return self::$using;
         }
 
