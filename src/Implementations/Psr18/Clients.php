@@ -133,6 +133,12 @@ final class Clients extends Implementation implements ClientsContract
             builder: static fn (string $class = '\Httpful\Client'): object => new $class(),
         ));
 
+        self::$candidates->add(CandidateEntity::create(
+            package: 'joomla/http',
+            version: '^2.0 | ^3.0',
+            builder: static fn (string $class = '\Joomla\Http\Http'): object => new $class(),
+        ));
+
         return self::$candidates;
     }
 
