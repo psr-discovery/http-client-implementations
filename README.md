@@ -27,6 +27,7 @@ Successful discovery requires the presence of a compatible implementation in the
 The following `psr/http-client-implementation` implementations are discovered and instantiated automatically:
 
 -   [guzzlehttp/guzzle](https://github.com/guzzle/guzzle) ^7.0
+-   [joomla/http](https://github.com/voku/httpful) ^2.0 | ^3.0
 -   [kriswallsmith/buzz](https://github.com/kriswallsmith/Buzz) ^1.0
 -   [php-http/curl-client](https://github.com/php-http/curl-client) ^2.1
 -   [php-http/guzzle5-adapter](https://github.com/php-http/guzzle5-adapter) ^2.0
