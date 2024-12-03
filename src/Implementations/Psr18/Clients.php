@@ -69,7 +69,7 @@ final class Clients extends Implementation implements ClientsContract
 
         self::$candidates->add(CandidateEntity::create(
             package: 'guzzlehttp/guzzle',
-            version: '^7.0',
+            version: '^7.0 | ^8.0',
             builder: static fn (string $class = '\GuzzleHttp\Client'): object => new $class(),
         ));
 
