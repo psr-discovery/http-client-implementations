@@ -142,7 +142,12 @@ final class Clients extends Implementation implements ClientsContract
         self::$candidates->add(CandidateEntity::create(
             package: 'nimbly/shuttle',
             version: '^1.0',
-            builder: static fn (string $class = '\Nimbly\Shuttle\Shuttle'): object => new $class(),
+            builder: static fn (string $class = '\Nimbly\Shuttle\Shuttle'): object => new $class(
+                requestFactory: Discover::httpRequestFactory(),
+                responseFactory: Discover::httpResponseFactory(),
+                streamFactory: Discover::httpStreamFactory(),
+                uriFactory: Discover::httpUriFactory(),
+            ),
         ));
 
         return self::$candidates;
