@@ -139,6 +139,12 @@ final class Clients extends Implementation implements ClientsContract
             builder: static fn (string $class = '\Joomla\Http\Http'): object => new $class(),
         ));
 
+        self::$candidates->add(CandidateEntity::create(
+            package: 'nimbly/shuttle',
+            version: '^1.0',
+            builder: static fn (string $class = '\Nimbly\Shuttle\Shuttle'): object => new $class(),
+        ));
+
         return self::$candidates;
     }
 
