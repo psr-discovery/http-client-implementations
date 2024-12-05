@@ -26,7 +26,7 @@ Successful discovery requires the presence of a compatible implementation in the
 
 The following `psr/http-client-implementation` implementations are discovered and instantiated automatically:
 
--   [guzzlehttp/guzzle](https://github.com/guzzle/guzzle) ^7.0
+-   [guzzlehttp/guzzle](https://github.com/guzzle/guzzle) ^7.0 | ^8.0
 -   [joomla/http](https://github.com/voku/httpful) ^2.0 | ^3.0
 -   [kriswallsmith/buzz](https://github.com/kriswallsmith/Buzz) ^1.0
 -   [php-http/curl-client](https://github.com/php-http/curl-client) ^2.1
@@ -35,7 +35,7 @@ The following `psr/http-client-implementation` implementations are discovered an
 -   [php-http/guzzle7-adapter](https://github.com/php-http/guzzle7-adapter) ^0.1 | ^1.0
 -   [php-http/socket-client](https://github.com/php-http/socket-client) ^2.0
 -   [symfony/http-client](https://github.com/symfony/http-client) ^4.3 | ^5.0 | ^6.0 | ^7.0 | ^8.0
--   [voku/httpful](https://github.com/voku/httpful) ^2.2
+-   [voku/httpful](https://github.com/voku/httpful) ^2.2 | ^3.0
 -   [nimbly/shuttle](https://github.com/nimbly/shuttle) ^1.0
 
 The following mock implementations are also available:

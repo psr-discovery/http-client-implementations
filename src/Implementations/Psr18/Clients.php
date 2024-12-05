@@ -129,7 +129,7 @@ final class Clients extends Implementation implements ClientsContract
 
         self::$candidates->add(CandidateEntity::create(
             package: 'voku/httpful',
-            version: '^2.2',
+            version: '^2.2 | ^3.0',
             builder: static fn (string $class = '\Httpful\Client'): object => new $class(),
         ));
 
